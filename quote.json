@@ -1,0 +1,170 @@
+{
+  "language": {
+    "600660.SS": "en-US"
+  },
+  "region": {
+    "600660.SS": "US"
+  },
+  "quoteType": {
+    "600660.SS": "EQUITY"
+  },
+  "currency": {
+    "600660.SS": "CNY"
+  },
+  "exchange": {
+    "600660.SS": "SHH"
+  },
+  "market": {
+    "600660.SS": "cn_market"
+  },
+  "earningsTimestamp": {
+    "600660.SS": 1552647540
+  },
+  "earningsTimestampEnd": {
+    "600660.SS": 1540555200
+  },
+  "sharesOutstanding": {
+    "600660.SS": 2508620032
+  },
+  "fiftyDayAverage": {
+    "600660.SS": 25.054722
+  },
+  "fiftyDayAverageChange": {
+    "600660.SS": 1.2652779
+  },
+  "fiftyDayAverageChangePercent": {
+    "600660.SS": 0.050500575
+  },
+  "twoHundredDayAverage": {
+    "600660.SS": 23.504929
+  },
+  "twoHundredDayAverageChange": {
+    "600660.SS": 2.815071
+  },
+  "twoHundredDayAverageChangePercent": {
+    "600660.SS": 0.11976514
+  },
+  "marketCap": {
+    "600660.SS": 57806352384
+  },
+  "forwardPE": {
+    "600660.SS": 15.482352
+  },
+  "sourceInterval": {
+    "600660.SS": 15
+  },
+  "exchangeTimezoneName": {
+    "600660.SS": "Asia\/Shanghai"
+  },
+  "exchangeTimezoneShortName": {
+    "600660.SS": "CST"
+  },
+  "gmtOffSetMilliseconds": {
+    "600660.SS": 28800000
+  },
+  "esgPopulated": {
+    "600660.SS": false
+  },
+  "tradeable": {
+    "600660.SS": false
+  },
+  "priceHint": {
+    "600660.SS": 2
+  },
+  "earningsTimestampStart": {
+    "600660.SS": 1540205940
+  },
+  "regularMarketPrice": {
+    "600660.SS": 26.32
+  },
+  "regularMarketTime": {
+    "600660.SS": 1556002803
+  },
+  "regularMarketChange": {
+    "600660.SS": -0.13000107
+  },
+  "regularMarketOpen": {
+    "600660.SS": 26.5
+  },
+  "regularMarketDayHigh": {
+    "600660.SS": 27.08
+  },
+  "regularMarketDayLow": {
+    "600660.SS": 26.1
+  },
+  "regularMarketVolume": {
+    "600660.SS": 15618077
+  },
+  "regularMarketChangePercent": {
+    "600660.SS": -0.4914974
+  },
+  "regularMarketDayRange": {
+    "600660.SS": "26.1 - 27.08"
+  },
+  "regularMarketPreviousClose": {
+    "600660.SS": 26.45
+  },
+  "bid": {
+    "600660.SS": 26.32
+  },
+  "ask": {
+    "600660.SS": 26.33
+  },
+  "bidSize": {
+    "600660.SS": 0
+  },
+  "askSize": {
+    "600660.SS": 0
+  },
+  "messageBoardId": {
+    "600660.SS": "finmb_5646981"
+  },
+  "fullExchangeName": {
+    "600660.SS": "Shanghai"
+  },
+  "longName": {
+    "600660.SS": "Fuyao Glass Industry Group Co., Ltd."
+  },
+  "averageDailyVolume3Month": {
+    "600660.SS": 15806760
+  },
+  "averageDailyVolume10Day": {
+    "600660.SS": 17648868
+  },
+  "fiftyTwoWeekLowChange": {
+    "600660.SS": 5.91
+  },
+  "fiftyTwoWeekLowChangePercent": {
+    "600660.SS": 0.28956392
+  },
+  "fiftyTwoWeekRange": {
+    "600660.SS": "20.41 - 27.88"
+  },
+  "fiftyTwoWeekHighChange": {
+    "600660.SS": -1.5599995
+  },
+  "epsForward": {
+    "600660.SS": 1.7
+  },
+  "fiftyTwoWeekHighChangePercent": {
+    "600660.SS": -0.055954073
+  },
+  "fiftyTwoWeekLow": {
+    "600660.SS": 20.41
+  },
+  "fiftyTwoWeekHigh": {
+    "600660.SS": 27.88
+  },
+  "marketState": {
+    "600660.SS": "POSTPOST"
+  },
+  "exchangeDataDelayedBy": {
+    "600660.SS": 0
+  },
+  "shortName": {
+    "600660.SS": "FUYAO GLASS INDUST"
+  },
+  "price": {
+    "600660.SS": 26.32
+  }
+}

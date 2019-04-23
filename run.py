@@ -27,12 +27,20 @@ STOCKS = {
     'fuYao': "600660.ss"
 }
 
-start = datetime(2019, 1, 1)
-today = datetime.today()
-fuYao = web.DataReader(STOCKS.get('fuYao'), 'yahoo', start, today, session=session)
 
-print(fuYao["Adj Close"].head())
+def get_px(stock, start, end):
+    return web.DataReader(stock, 'yahoo', start, end, session=session)
 
-fuYao["Adj Close"].plot(legend=True)
 
-pyplot.show()
+if __name__ == "__main__":
+    start = datetime(2010, 1, 1)
+    today = datetime.today()
+
+    for (k, v) in STOCKS.items():
+        px = DataFrame(get_px(v, start, today))
+
+    # print(pdr.get_quote_yahoo(STOCKS['fuYao']))
+
+# fuYao["Adj Close"].plot(legend=True)
+#
+# pyplot.show()
