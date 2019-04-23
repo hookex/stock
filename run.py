@@ -17,7 +17,11 @@ import seaborn as sns
 from datetime import datetime, timedelta
 
 expire_after = timedelta(days=3)
-session = requests_cache.CachedSession(cache_name='cache', backend='sqlite', expire_after=expire_after)
+session = requests_cache.CachedSession(
+    cache_name='cache',
+    backend='sqlite',
+    expire_after=expire_after,
+)
 
 STOCKS = {
     'fuYao': "600660.ss"
@@ -25,6 +29,10 @@ STOCKS = {
 
 start = datetime(2019, 1, 1)
 today = datetime.today()
-f = web.DataReader(STOCKS.get('fuYao'), 'yahoo', start, today, session=session)
+fuYao = web.DataReader(STOCKS.get('fuYao'), 'yahoo', start, today, session=session)
 
-print(f.head(100))
+print(fuYao["Adj Close"].head())
+
+fuYao["Adj Close"].plot(legend=True)
+
+pyplot.show()
