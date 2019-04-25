@@ -16,6 +16,8 @@ import seaborn as sns
 
 from datetime import datetime, timedelta
 
+from all_stock import get_all_stock_code
+
 expire_after = timedelta(days=3)
 session = requests_cache.CachedSession(
     cache_name='quote',
@@ -50,6 +52,12 @@ def get_pxs(stocks):
 
 
 if __name__ == "__main__":
+    all_stock_code_df = get_all_stock_code()
+
+    for code in all_stock_code_df:
+        print(1)
+        print(code)
+
     px = get_pxs(STOCKS)
 
     columns = ['shortName', 'price', 'forwardPE']
