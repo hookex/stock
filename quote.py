@@ -27,7 +27,7 @@ STOCKS = {
     'fuYao': '600660.ss',
     'haiKang': '002415.sz',
     'zhiHui': '600869.ss',
-    # 'jingLan': '000711.sz',
+    'jingLan': '000711.sz',
 }
 
 
@@ -35,6 +35,7 @@ def get_px(stock):
     return pdr.get_quote_yahoo(stock, session=session)
 
 
+# TODO: 不能用
 def get_px_error(stocks):
     return DataFrame({n: get_px(n) for n in stocks.values()})
 
