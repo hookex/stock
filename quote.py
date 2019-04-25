@@ -25,8 +25,8 @@ session = requests_cache.CachedSession(
 
 STOCKS = {
     'fuYao': '600660.ss',
-    # 'haiKang': '002415.sz',
-    # 'zhiHui': '600869.ss',
+    'haiKang': '002415.sz',
+    'zhiHui': '600869.ss',
     # 'jingLan': '000711.sz',
 }
 
@@ -35,22 +35,22 @@ def get_px(stock):
     return pdr.get_quote_yahoo(stock, session=session)
 
 
-def get_pxs(stocks):
+def get_px_error(stocks):
     return DataFrame({n: get_px(n) for n in stocks.values()})
 
 
-def get_pxs2(stocks):
+def get_pxs(stocks):
     df = DataFrame()
 
     for stock in stocks.values():
-        df.append(get_px(stock))
+        df = df.append(get_px(stock))
 
     return df
 
 
 if __name__ == "__main__":
-    px = get_pxs2(STOCKS)
+    px = get_pxs(STOCKS)
 
     # fields = ['shortName', 'price', 'forwardPE']
 
-    print(px)
+    print(px.to_json())
