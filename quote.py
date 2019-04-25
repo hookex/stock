@@ -51,6 +51,6 @@ def get_pxs(stocks):
 if __name__ == "__main__":
     px = get_pxs(STOCKS)
 
-    # fields = ['shortName', 'price', 'forwardPE']
+    columns = ['shortName', 'price', 'forwardPE']
 
-    print(px.to_json())
+    print(px.get(columns))
