@@ -13,7 +13,7 @@ if __name__ == "__main__":
     ssDf = ss.get_ss(start, today)
     rateDf = currency_rate.get_cny(start, today)
 
-    rateDf = rateDf.apply(lambda x: (x - 6) * 3000)
+    rateDf = rateDf.apply(lambda x: (1 / x - 0.13) * 70000)
 
     # 画纸
     ax1 = ssDf.plot(y="ss", label="ss", legend=True)
