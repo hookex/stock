@@ -7,16 +7,9 @@ from datetime import timedelta
 
 from matplotlib import pyplot
 
-import seaborn as sns
-
-from datetime import datetime
-
-radius = [1.0, 2.0, 3.0, 4.0]
-area = [3.14159, 12.56636, 28.27431, 50.26544]
-
 expire_after = timedelta(days=7)
 session = requests_cache.CachedSession(
-    cache_name='quote',
+    cache_name='currency',
     backend='sqlite',
     expire_after=expire_after,
 )
