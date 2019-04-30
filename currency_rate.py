@@ -1,10 +1,9 @@
 # 获取历史汇率
 
 import pandas_datareader.data as web
-from pandas import Series, DataFrame
+from pandas import DataFrame
 
 import requests_cache
-from datetime import timedelta
 
 from matplotlib import pyplot
 from datetime import datetime, timedelta
@@ -22,5 +21,5 @@ def get_cny(start=datetime(2019, 1, 1), end=datetime.today()):
 
 
 if __name__ == "__main__":
-    get_cny().plot(legend=True)
+    get_cny(datetime(1950, 1, 1)).plot(legend=True)
     pyplot.show()
