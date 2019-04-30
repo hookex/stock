@@ -1,23 +1,24 @@
 # 获取历史汇率
 
 import pandas_datareader.data as web
+from pandas import Series, DataFrame
 
 import requests_cache
 from datetime import timedelta
 
 from matplotlib import pyplot
+from datetime import datetime, timedelta
 
 expire_after = timedelta(days=7)
 session = requests_cache.CachedSession(
-    cache_name='currency',
+    cache_name='cache',
     backend='sqlite',
     expire_after=expire_after,
 )
 
 
-def get_cny():
-    cny = web.get_data_fred('DEXCHUS', session=session)
-    return cny
+def get_cny(start=datetime(2019, 1, 1), end=datetime.today()):
+    return DataFrame(web.get_data_fred('DEXCHUS', start, end, session=session))
 
 
 if __name__ == "__main__":

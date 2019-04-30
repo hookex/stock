@@ -20,7 +20,7 @@ from all_stock import get_all_stock_code
 
 expire_after = timedelta(days=7)
 session = requests_cache.CachedSession(
-    cache_name='quote',
+    cache_name='cache',
     backend='sqlite',
     expire_after=expire_after,
 )
