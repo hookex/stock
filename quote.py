@@ -55,10 +55,10 @@ if __name__ == "__main__":
     all_stock_code_df = get_all_stock_code()
 
     for code in all_stock_code_df:
-        print(1)
         print(code)
 
     px = get_pxs(STOCKS)
+
 
     columns = ['shortName', 'price', 'forwardPE']
 
