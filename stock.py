@@ -33,20 +33,24 @@ STOCKS = {
 }
 
 
-def get_px(stock):
-    return pdr.get_quote_yahoo(stock, session=session)
+def get_stock(stock):
+    return DataFrame(pdr.get_quote_yahoo(stock, session=session))
+
+
+def get_stock_quandl(stock):
+    return DataFrame(pdr.get_data_quandl(stock, api_key="A83E-dJAdqmse9P-Tpng", session=session))
 
 
 # TODO: 不能用
 def get_px_error(stocks):
-    return DataFrame({n: get_px(n) for n in stocks.values()})
+    return DataFrame({n: get_stock(n) for n in stocks.values()})
 
 
 def get_pxs(stocks):
     df = DataFrame()
 
     for stock in stocks.values():
-        df = df.append(get_px(stock))
+        df = df.append(get_stock(stock))
 
     return df
 
@@ -58,7 +62,6 @@ if __name__ == "__main__":
         print(code)
 
     px = get_pxs(STOCKS)
-
 
     columns = ['shortName', 'price', 'forwardPE']
 
