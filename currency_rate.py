@@ -16,10 +16,13 @@ session = requests_cache.CachedSession(
 )
 
 
+# 这个数据源的延迟太高
 def get_cny(start=datetime(2019, 1, 1), end=datetime.today()):
     return DataFrame(web.get_data_fred('DEXCHUS', start, end, session=session))
 
 
 if __name__ == "__main__":
-    get_cny(datetime(1950, 1, 1)).plot(legend=True)
+    df = get_cny(datetime(2019, 4, 1), datetime(2019, 5, 6))
+    print(df)
+    df.plot(legend=True)
     pyplot.show()

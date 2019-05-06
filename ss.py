@@ -20,12 +20,12 @@ session = requests_cache.CachedSession(
 )
 
 
-def get_ss(start=datetime(2018, 1, 1), end=datetime.today()):
-    return DataFrame(web.DataReader("000001.SS", 'yahoo', start, end, session=session))["Adj Close"]
+def get_ss(start=datetime(2019, 4, 1), end=datetime.today()):
+    return DataFrame(web.DataReader("000001.SS", 'yahoo', start, end, session=session))
 
 
 if __name__ == "__main__":
-    df = get_ss()
+    df = get_ss()["Adj Close"]
     print(df)
     df.plot()
     pyplot.show()

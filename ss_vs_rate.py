@@ -1,5 +1,6 @@
 # 上证指数和汇率的关系
 
+import pandas as pd
 from matplotlib import pyplot
 from datetime import datetime
 
@@ -7,22 +8,17 @@ import currency_rate
 import ss
 
 if __name__ == "__main__":
-    start = datetime(2010, 1, 1)
+    start = datetime(2018, 3, 1)
     today = datetime.today()
+    index = pd.DataFrame(columns=['SS', 'CNYUSD'])
 
     ssDf = ss.get_ss(start, today)
-    rateDf = currency_rate.get_cny(start, today)
+    cn_us = currency_rate.get_cny(start, today).apply(lambda x: (1 / x))
 
-    rateDf = rateDf.apply(lambda x: (1 / x - 0.13) * 70000)
+    index['SS'] = ssDf["Adj Close"]
+    index['CNYUSD'] = cn_us['DEXCHUS']
 
-    # 画纸
-    ax1 = ssDf.plot(y="ss", label="ss", legend=True)
+    index.plot(subplots=True, figsize=(16, 10), grid=True, x_compat=True)
 
-    rateDf.plot(ax=ax1, label="rate", legend=True)
-
-    pyplot.xlabel('date')
-
-    pyplot.ylabel('ss/currency')
     pyplot.title('ss VS currency rate')
-    pyplot.grid(True)
     pyplot.show()
