@@ -9,7 +9,7 @@ import ss
 import gold
 
 if __name__ == "__main__":
-    start = datetime(2018, 3, 1)
+    start = datetime(2017, 3, 1)
     today = datetime.today()
     index = pd.DataFrame(columns=['SS', 'CNYUSD'])
 
@@ -23,5 +23,5 @@ if __name__ == "__main__":
 
     index.plot(subplots=True, figsize=(16, 10), grid=True, x_compat=True)
 
-    pyplot.title('ss VS currency rate')
+    # pyplot.title('ss VS currency rate')
     pyplot.show()
