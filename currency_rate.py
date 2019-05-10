@@ -22,7 +22,7 @@ def get_cny(start=datetime(2019, 1, 1), end=datetime.today()):
 
 
 if __name__ == "__main__":
-    df = get_cny(datetime(2019, 4, 1), datetime(2019, 5, 6))
+    df = get_cny(datetime(2019, 4, 1))
     print(df)
     df.plot(legend=True)
     pyplot.show()

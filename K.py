@@ -1,4 +1,4 @@
-import tushare as ts
+import my_tushare as ts
 import pandas as pd
 from pandas import Series, DataFrame
 

@@ -1,4 +1,4 @@
-import tushare as ts
+import my_tushare as ts
 from matplotlib import pyplot
 from pandas import Series, DataFrame
 from datetime import datetime, timedelta

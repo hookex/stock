@@ -1,4 +1,4 @@
-import tushare as ts
+import my_tushare as ts
 from pandas import Series, DataFrame
 
 # 设置token
